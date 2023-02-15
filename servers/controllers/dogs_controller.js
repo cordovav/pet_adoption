@@ -8,7 +8,6 @@ dogs.get('/', async (req,res) => {
     try {
         const foundDogs = await Dog.findAll(
             {
-           //order: [ [ 'age', 'ASC' ] ],
             where: {
                 name :{[Op.like]: `%${req.query.name ? req.query.name : ''}%`}
 
@@ -52,8 +51,9 @@ dogs.post('/', async (req,res) => {
     }
     })
 
-
+// EDIT A DOG
 dogs.put('/:id', async (req, res) => {
+    console.log(req.body, req.params.id, "console logging req body for edit")
     try {
         const updatedDogs = await Dog.update(req.body, {
             where: {
