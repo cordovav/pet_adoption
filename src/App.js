@@ -34,6 +34,8 @@ function App() {
             <Route path="/adoption" element={<Adoption />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/edit" element={<Edit />} />
+
           </Routes>
         </div>
 

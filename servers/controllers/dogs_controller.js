@@ -10,7 +10,7 @@ dogs.get('/', async (req,res) => {
             {
            //order: [ [ 'age', 'ASC' ] ],
             where: {
-               name :{[Op.like]: `%${req.query.name ? req.query.name : ''}%`}
+                name :{[Op.like]: `%${req.query.name ? req.query.name : ''}%`}
 
 }
         }
